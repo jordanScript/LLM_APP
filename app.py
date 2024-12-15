@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from transformers import T5Tokenizer, T5ForConditionalGeneration
+from datasets import load_dataset
 
 app = Flask(__name__)
 
@@ -9,6 +10,9 @@ model_name = "google/flan-t5-small"
 tokenizer_FT5 = T5Tokenizer.from_pretrained(model_name, legacy=True)
 # Importamos el modelo pre-entrenado
 model_FT5 = T5ForConditionalGeneration.from_pretrained(model_name, device_map="auto")
+
+# Cargamos el dataset
+ds = load_dataset("mlsum", 'es', trust_remote_code=True)
 
 @app.route('/flan-t5', methods=['POST'])
 def query():
