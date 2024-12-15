@@ -1,0 +1,10 @@
+flask
+transformers
+sentencepiece
+accelerate
+datasets
+evaluate
+rouge_score
+torchvision
+torchaudio
+torch

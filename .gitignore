@@ -1,0 +1,36 @@
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Entornos virtuales
+venv/
+env/
+.virtualenv/
+
+# Configuración de entornos
+*.env
+.env
+
+# Archivos de caché
+.cache/
+transformers_cache/
+datasets_cache/
+huggingface/
+
+# Modelos y pesos preentrenados
+pytorch_model.bin
+tf_model.h5
+
+# Archivos de registro
+*.log
+
+# Configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.swp
