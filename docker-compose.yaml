@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   flan-t5-service:
-    container_name: flan-t5-container
+    container_name: llm_app
     build:
       context: .
       dockerfile: Dockerfile
@@ -20,5 +20,3 @@ services:
     environment:
       - FLASK_ENV=development  # Modo desarrollo para activar el auto-reload
       - FLASK_APP=app.py       # Define tu aplicación Flask principal
-    working_dir: /app          # Asegura que el directorio de trabajo sea /app
-    command: flask run --host=0.0.0.0 --port=5000
