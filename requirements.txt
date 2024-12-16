@@ -8,3 +8,4 @@ rouge_score
 torchvision
 torchaudio
 torch
+python-dotenv
